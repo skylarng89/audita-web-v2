@@ -45,8 +45,30 @@ const routes: RouteRecordRaw[] = [
         name: "dashboard",
         component: () => import("@/pages/DashboardPage.vue"),
       },
-      // Sprint 2-5 module pages (change-requests, users, groups, audit-trail,
-      // admin, platform) mount here as they are implemented.
+      {
+        path: "change-requests",
+        name: "cr-list",
+        component: () =>
+          import("@/pages/change-requests/ChangeRequestListPage.vue"),
+      },
+      {
+        path: "change-requests/new",
+        name: "cr-new",
+        component: () =>
+          import("@/pages/change-requests/ChangeRequestNewPage.vue"),
+      },
+      {
+        path: "change-requests/:id",
+        name: "cr-detail",
+        component: () =>
+          import("@/pages/change-requests/ChangeRequestDetailPage.vue"),
+      },
+      {
+        path: "audit-trail",
+        name: "audit-trail",
+        component: () => import("@/pages/audit-trail/AuditTrailPage.vue"),
+      },
+      // Sprint 5 admin/platform pages mount here as they are implemented.
     ],
   },
   {
